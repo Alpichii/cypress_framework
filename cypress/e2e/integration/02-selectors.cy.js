@@ -30,6 +30,46 @@ describe("Cypress Selectors", () => {
     cy.get(".CardGrids_CardGrids__qDdyI").contains("Html Elements");
 
     // This will fail because 'Html Elements' card that we are looking for is not in this parent element
-    cy.get(".Header_Header__Z9Z4k").contains("Html Elements");
+    // cy.get(".Header_Header__Z9Z4k").contains("Html Elements");
+  });
+
+  it("Practice Web Elements using - find()", () => {
+    cy.visit("https://techglobal-training.com/frontend");
+
+    // It will locate the web elements with visible text 'Html Elements' in the '.cards'
+    cy.get(".cards").contains("Html Elements").click();
+
+    cy.get("#radio-button-group .radio");
+
+    cy.get("#radio-button-group").find("div");
+
+    cy.get("#radio-button-group").contains("C#");
+  });
+
+  it("Practice Web Elements using - next(), prev(), nextAll(), prevAll()", () => {
+    cy.visit("https://techglobal-training.com/frontend");
+
+    // It will locate the web elements with visible text 'Html Elements' in the '.cards'
+    cy.get(".cards").contains("Html Elements").click();
+
+    // next() will locate immediate 'next' sibling of web elemen that contains 'Paragraphs' text.
+    cy.get("div").contains("Paragraphs").next();
+
+    // prev() will locate immediate 'previous' sibling of web elemen id with #testing_paragraph
+    cy.get("#testing_paragraph").prev();
+
+    // nextAll() will locate ALL 'next' subling elements of web elemen that contains 'Paragraphs' text
+    cy.get("div").contains("Paragraphs").nextAll();
+
+    cy.get("#testing_paragraph").prevAll();
+
+    cy.get('#checkbox-button-group').find('#apple_check').contains('Apple').as('appleElement')
+
+    // cy.get('@appleElement').then(($text) => {
+    //     const ele = $text.text()
+
+    //     cy.log(ele)
+    // })
+
   });
 });
