@@ -10,10 +10,16 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+<<<<<<< HEAD
     "cypress": "^13.2.0",
     "cypress-real-events": "^1.10.3"
   },
   "dependencies": {
     "@4tw/cypress-drag-drop": "^2.2.5"
+=======
+    "@4tw/cypress-drag-drop": "^2.2.5",
+    "cypress": "^13.2.0",
+    "cypress-real-events": "^1.10.0"
+>>>>>>> master
   }
 }

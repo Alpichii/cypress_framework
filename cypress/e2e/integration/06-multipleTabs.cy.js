@@ -25,10 +25,8 @@ describe("Interacting Multiple Tabls", () => {
 
     cy.contains("Multiple Windows").click();
 
-    cy.get('#tesla').invoke('removeAttr', 'target').click()
+    cy.get("#tesla").invoke("removeAttr", "target").click();
 
-
-    cy.url().should('include', 'tesla')
-
+    cy.url().should("include", "tesla");
   });
 });

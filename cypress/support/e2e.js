@@ -14,7 +14,13 @@
 // ***********************************************************
 
 // Import commands.js using ES2015 syntax:
-import './commands'
+import "./commands";
+import 'cypress-real-events'
+import '@4tw/cypress-drag-drop'
 
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
+
+beforeEach(() => {
+  cy.visit("https://techglobal-training.com/frontend");
+});
